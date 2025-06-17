@@ -19,13 +19,13 @@ public class HomePageTest extends BaseClass {
 	@Test
 	public void dateDifferenceinDays() {
 		homepage = new HomePage(driver);
-		driver.get("https://pinformed.wipo.int/");
+		driver.get("https://patinformed.wipo.int/");
 		homepage.inputDataInSearchBox("par");
 		homepage.clickOnpatentListOption();
 
 		//  Identify block by two known values inside it
-	    String text1 = "1773302"; 
-	    String text2 = "";       
+	    String text1 = "2098224"; 
+	    String text2 = "Belgium";       
 
 	    WebElement block = homepage.getBlockByTwoTexts(text1, text2);
 

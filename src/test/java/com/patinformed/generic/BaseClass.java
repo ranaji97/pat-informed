@@ -13,7 +13,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 
-	// Declare the global WebDriver variable whose availability is public
 	public static WebDriver driver;
 
 	@BeforeClass
