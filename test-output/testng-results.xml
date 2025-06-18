@@ -14,19 +14,19 @@
       <![CDATA[closeBrowser]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-06-17T18:44:33 IST" name="Default suite" finished-at="2025-06-17T18:44:51 IST" duration-ms="18797">
+  <suite started-at="2025-06-18T21:52:31 IST" name="Default suite" finished-at="2025-06-18T21:52:57 IST" duration-ms="25616">
     <groups>
     </groups>
-    <test started-at="2025-06-17T18:44:33 IST" name="Default test" finished-at="2025-06-17T18:44:51 IST" duration-ms="18797">
+    <test started-at="2025-06-18T21:52:31 IST" name="Default test" finished-at="2025-06-18T21:52:57 IST" duration-ms="25616">
       <class name="com.patinformed.testscript.HomePageTest">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.patinformed.testscript.HomePageTest@7f0eb4b4]" started-at="2025-06-17T18:44:33 IST" name="openBrowser" finished-at="2025-06-17T18:44:42 IST" duration-ms="8848" status="PASS">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.patinformed.testscript.HomePageTest@7f0eb4b4]" started-at="2025-06-18T21:52:32 IST" name="openBrowser" finished-at="2025-06-18T21:52:48 IST" duration-ms="15909" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser opened]]>
             </line>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="dateDifferenceinDays()[pri:0, instance:com.patinformed.testscript.HomePageTest@7f0eb4b4]" started-at="2025-06-17T18:44:42 IST" name="dateDifferenceinDays" finished-at="2025-06-17T18:44:51 IST" duration-ms="8679" status="PASS">
+        <test-method signature="dateDifferenceinDays()[pri:0, instance:com.patinformed.testscript.HomePageTest@7f0eb4b4]" started-at="2025-06-18T21:52:48 IST" name="dateDifferenceinDays" finished-at="2025-06-18T21:52:56 IST" duration-ms="8179" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[[ Test script execution starts from here. ]]]>
@@ -36,7 +36,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- dateDifferenceinDays -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.patinformed.testscript.HomePageTest@7f0eb4b4]" started-at="2025-06-17T18:44:51 IST" name="closeBrowser" finished-at="2025-06-17T18:44:51 IST" duration-ms="554" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.patinformed.testscript.HomePageTest@7f0eb4b4]" started-at="2025-06-18T21:52:56 IST" name="closeBrowser" finished-at="2025-06-18T21:52:57 IST" duration-ms="775" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[closeBrowser]]>

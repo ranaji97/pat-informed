@@ -61,7 +61,7 @@ public class HomePage {
 	public String getPublicationDate(WebElement block) {
 		try {
 			WebElement pub = block.findElement(
-					By.xpath(".//b[contains(text(),'Publication date')]/parent::td/following-sibling::td"));
+					By.xpath("//b[contains(text(),'Publication date')]/parent::td/following-sibling::td"));
 			return pub.getText().split("\\(")[0].trim();
 		} catch (Exception e) {
 			return null;
@@ -71,7 +71,7 @@ public class HomePage {
 	public String getFilingDate(WebElement block) {
 		try {
 			WebElement file = block
-					.findElement(By.xpath(".//b[contains(text(),'Filing date')]/parent::td/following-sibling::td"));
+					.findElement(By.xpath("//b[contains(text(),'Filing date')]/parent::td/following-sibling::td"));
 			return file.getText().split("\\(")[0].trim();
 		} catch (Exception e) {
 			return null;
