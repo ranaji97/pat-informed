@@ -26,27 +26,28 @@ public class HomePageTest extends BaseClass {
 		//  Identify block by two known values inside it
 	    String text1 = "2098224"; 
 	    String text2 = "Belgium";       
+	    boolean requireBoth = true;         
 
-	    WebElement block = homepage.getBlockByTwoTexts(text1, text2);
+        WebElement block = homepage.getBlockByTexts(text1, text2, requireBoth);
 
-	    if (block == null) {
-	        System.out.println(" No block found containing both: " + text1 + " AND " + text2);
+        if (block == null) {
+        	System.out.println(" No block found containing both: " + text1 + " AND " + text2);
 	        return;
-	    }
+        }
 
-	    String filingDateStr = homepage.getFilingDate(block);
-	    String publicationDateStr = homepage.getPublicationDate(block);
+        String filingDateStr = homepage.getFilingDate(block);
+        String publicationDateStr = homepage.getPublicationDate(block);
 
-	    if (filingDateStr != null && publicationDateStr != null) {
-	        LocalDate filingDate = LocalDate.parse(filingDateStr);
-	        LocalDate publicationDate = LocalDate.parse(publicationDateStr);
-	        long diff = ChronoUnit.DAYS.between(filingDate, publicationDate);
+        if (filingDateStr != null && publicationDateStr != null) {
+            LocalDate filingDate = LocalDate.parse(filingDateStr);
+            LocalDate publicationDate = LocalDate.parse(publicationDateStr);
+            long diff = ChronoUnit.DAYS.between(filingDate, publicationDate);
 
-	        System.out.println(" Block identified by: " + text1 + " AND " + text2);
-	        System.out.println(" Filing Date: " + filingDateStr + " | Publication Date: " + publicationDateStr);
-	        System.out.println(" Difference: " + diff + " days");
-	    } else {
-	        System.out.println(" Missing one or both dates in the matched block.");
-	    }
+            System.out.println(" Block matched using: '" + text1 + "' and '" + text2 + "'");
+            System.out.println(" Filing Date: " + filingDateStr + " | Publication Date: " + publicationDateStr);
+            System.out.println(" Difference in Days: " + diff);
+        } else {
+            System.out.println(" Dates missing. Filing: " + filingDateStr + ", Publication: " + publicationDateStr);
+        }
+    }
 	}
-}

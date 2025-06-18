@@ -1,5 +1,6 @@
 package com.patinformed.pom;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -7,9 +8,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage {
 	private WebDriver driver;
+	private WebDriverWait wait;
 
 	@FindBy(xpath = "//button[contains(text(),'I have read and agree to the terms')]")
 	private WebElement agreeButton;
@@ -34,6 +38,9 @@ public class HomePage {
 	}
 
 	public void clickOnpatentListOption() {
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		// Wait until the patentOption is visible and clickable
+		wait.until(ExpectedConditions.elementToBeClickable(patentOption));
 		patentOption.click();
 	}
 
@@ -43,25 +50,41 @@ public class HomePage {
 		agreeButton.click();
 	}
 
-	@FindBy(xpath = "//table[contains(@class, 'patentDetails')]")
-	private WebElement allPatentBlocks;
+//	@FindBy(xpath = "//table[contains(@class, 'patentDetails')]")
+//	private WebElement allPatentBlocks;
 
-	//  find block containing both textA and textB
-	public WebElement getBlockByTwoTexts(String textA, String textB) {
-	    List<WebElement> blocks = driver.findElements(By.xpath("//table[contains(@class, 'patentDetails')]"));
-	    for (WebElement block : blocks) {
-	        String blockText = block.getText();
-	        if (blockText.contains(textA) && blockText.contains(textB)) {
-	            return block;
-	        }
-	    }
-	    return null; 
+	public WebElement getBlockByTexts(String textA, String textB, boolean requireBoth) {
+		boolean hastextA = textA != null && !textA.trim().isEmpty();
+		boolean hastextB = textB != null && !textB.trim().isEmpty();
+
+		if (!hastextA && !hastextB) {
+			System.out.println(" No search text provided.");
+			return null;
+		}
+
+		List<WebElement> blocks = driver.findElements(By.xpath("//table[contains(@class, 'patentDetails')]"));
+
+		for (WebElement block : blocks) {
+			String blockText = block.getText();
+
+			if (requireBoth && hastextA && hastextB) {
+				if (blockText.contains(textA) && blockText.contains(textB)) {
+					return block;
+				}
+			} else {
+				if ((hastextA && blockText.contains(textA)) || (hastextB && blockText.contains(textB))) {
+					return block;
+				}
+			}
+		}
+
+		return null;
 	}
 
 	public String getPublicationDate(WebElement block) {
 		try {
 			WebElement pub = block.findElement(
-					By.xpath("//b[contains(text(),'Publication date')]/parent::td/following-sibling::td"));
+					By.xpath(".//b[contains(text(),'Publication date')]/parent::td/following-sibling::td"));
 			return pub.getText().split("\\(")[0].trim();
 		} catch (Exception e) {
 			return null;
@@ -71,11 +94,10 @@ public class HomePage {
 	public String getFilingDate(WebElement block) {
 		try {
 			WebElement file = block
-					.findElement(By.xpath("//b[contains(text(),'Filing date')]/parent::td/following-sibling::td"));
+					.findElement(By.xpath(".//b[contains(text(),'Filing date')]/parent::td/following-sibling::td"));
 			return file.getText().split("\\(")[0].trim();
 		} catch (Exception e) {
 			return null;
 		}
 	}
-
 }
