@@ -6,14 +6,15 @@ import com.patinformed.generic.BaseClass;
 import com.patinformed.pom.HomePage;
 import com.patinformed.pom.ResultPage;
 
-public class HomePageTest extends BaseClass {
+public class HomePageTestWithInput extends BaseClass {
 
     @Test
-    public void searchWithoutInputAndCalculateDateDiff() {
+    public void searchWithInputAndCalculateDateDiff() {
         HomePage home = new HomePage(driver);
         ResultPage result = new ResultPage(driver);
 
-        home.clickSearchButton();
+        home.enterSearchText("rop"); // Or use ConfigReader to make this dynamic
+        //home.clickSearchButton();
         home.clickOnAgreeButton();
         result.selectFirstResult();
         result.processPatentTables();

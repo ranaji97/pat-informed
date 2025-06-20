@@ -5,9 +5,9 @@
     <classes>
       <class name="com.patinformed.testscript.HomePageTest">
         <methods>
-          <include name="dateDifferenceinDays"/>
-          <include name="openBrowser"/>
-          <include name="closeBrowser"/>
+          <include name="searchWithoutInputAndCalculateDateDiff"/>
+          <include name="teardown"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- com.patinformed.testscript.HomePageTest -->
     </classes>
