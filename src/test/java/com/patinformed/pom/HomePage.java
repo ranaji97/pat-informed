@@ -3,6 +3,7 @@ package com.patinformed.pom;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,12 +30,13 @@ public class HomePage {
 	}
 
 	public void clickSearchButton() {
-		searchButton.click();
+		searchBox.sendKeys(Keys.ENTER);
+		//searchButton.click();
 	}
 
 	public void clickOnAgreeButton() {
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			WebElement agreeButton = wait.until(ExpectedConditions.presenceOfElementLocated(
 					By.xpath("//button[contains(text(),'I have read and agree to the terms')]")));
 

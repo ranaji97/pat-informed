@@ -1,25 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[[ Test script execution starts from here. ]]]>
+    </line>
+    <line>
+      <![CDATA[searchWithoutInputAndCalculateDateDiff [ Test script executed successfully. ]]]>
+    </line>
+    <line>
+      <![CDATA[[ Test script execution starts from here. ]]]>
+    </line>
+    <line>
+      <![CDATA[searchWithInputAndCalculateDateDiff [ Test script executed successfully. ]]]>
+    </line>
   </reporter-output>
-  <suite started-at="2025-06-21T04:20:41 IST" name="Default suite" finished-at="2025-06-21T04:21:22 IST" duration-ms="40856">
+  <suite started-at="2025-06-21T05:57:28 IST" name="Suite" finished-at="2025-06-21T05:57:58 IST" duration-ms="30192">
     <groups>
     </groups>
-    <test started-at="2025-06-21T04:20:41 IST" name="Default test" finished-at="2025-06-21T04:21:22 IST" duration-ms="40856">
+    <test started-at="2025-06-21T05:57:28 IST" name="Test" finished-at="2025-06-21T05:57:58 IST" duration-ms="30192">
       <class name="com.patinformed.testscript.HomePageTestWithInput">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.patinformed.testscript.HomePageTestWithInput@7f3b84b8]" started-at="2025-06-21T04:20:41 IST" name="setup" finished-at="2025-06-21T04:20:49 IST" duration-ms="7474" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.patinformed.testscript.HomePageTestWithInput@4efbca5a]" started-at="2025-06-21T05:57:40 IST" name="setup" finished-at="2025-06-21T05:57:44 IST" duration-ms="4684" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="searchWithInputAndCalculateDateDiff()[pri:0, instance:com.patinformed.testscript.HomePageTestWithInput@7f3b84b8]" started-at="2025-06-21T04:20:49 IST" name="searchWithInputAndCalculateDateDiff" finished-at="2025-06-21T04:21:22 IST" duration-ms="32892" status="PASS">
+        <test-method signature="searchWithInputAndCalculateDateDiff()[pri:0, instance:com.patinformed.testscript.HomePageTestWithInput@4efbca5a]" started-at="2025-06-21T05:57:44 IST" name="searchWithInputAndCalculateDateDiff" finished-at="2025-06-21T05:57:57 IST" duration-ms="12834" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[[ Test script execution starts from here. ]]]>
+            </line>
+            <line>
+              <![CDATA[searchWithInputAndCalculateDateDiff [ Test script executed successfully. ]]]>
+            </line>
           </reporter-output>
         </test-method> <!-- searchWithInputAndCalculateDateDiff -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.patinformed.testscript.HomePageTestWithInput@7f3b84b8]" started-at="2025-06-21T04:21:22 IST" name="teardown" finished-at="2025-06-21T04:21:22 IST" duration-ms="421" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.patinformed.testscript.HomePageTestWithInput@4efbca5a]" started-at="2025-06-21T05:57:57 IST" name="teardown" finished-at="2025-06-21T05:57:58 IST" duration-ms="608" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.patinformed.testscript.HomePageTestWithInput -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.patinformed.testscript.HomePageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.patinformed.testscript.HomePageTest@1623b78d]" started-at="2025-06-21T05:57:28 IST" name="setup" finished-at="2025-06-21T05:57:35 IST" duration-ms="7291" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="searchWithoutInputAndCalculateDateDiff()[pri:0, instance:com.patinformed.testscript.HomePageTest@1623b78d]" started-at="2025-06-21T05:57:35 IST" name="searchWithoutInputAndCalculateDateDiff" finished-at="2025-06-21T05:57:39 IST" duration-ms="3654" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[[ Test script execution starts from here. ]]]>
+            </line>
+            <line>
+              <![CDATA[searchWithoutInputAndCalculateDateDiff [ Test script executed successfully. ]]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchWithoutInputAndCalculateDateDiff -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.patinformed.testscript.HomePageTest@1623b78d]" started-at="2025-06-21T05:57:39 IST" name="teardown" finished-at="2025-06-21T05:57:40 IST" duration-ms="511" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.patinformed.testscript.HomePageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
