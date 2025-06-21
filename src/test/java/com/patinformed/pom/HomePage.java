@@ -30,8 +30,11 @@ public class HomePage {
 	}
 
 	public void clickSearchButton() {
-		searchBox.sendKeys(Keys.ENTER);
+		//searchBox.sendKeys(Keys.ENTER);
 		//searchButton.click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement searchBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(@class,'margin-right')]")));
+		searchBtn.click();
 	}
 
 	public void clickOnAgreeButton() {

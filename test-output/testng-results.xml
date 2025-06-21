@@ -14,16 +14,16 @@
       <![CDATA[searchWithInputAndCalculateDateDiff [ Test script executed successfully. ]]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-06-21T05:57:28 IST" name="Suite" finished-at="2025-06-21T05:57:58 IST" duration-ms="30192">
+  <suite started-at="2025-06-22T00:14:23 IST" name="Suite" finished-at="2025-06-22T00:14:57 IST" duration-ms="34101">
     <groups>
     </groups>
-    <test started-at="2025-06-21T05:57:28 IST" name="Test" finished-at="2025-06-21T05:57:58 IST" duration-ms="30192">
+    <test started-at="2025-06-22T00:14:23 IST" name="Test" finished-at="2025-06-22T00:14:57 IST" duration-ms="34101">
       <class name="com.patinformed.testscript.HomePageTestWithInput">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.patinformed.testscript.HomePageTestWithInput@4efbca5a]" started-at="2025-06-21T05:57:40 IST" name="setup" finished-at="2025-06-21T05:57:44 IST" duration-ms="4684" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.patinformed.testscript.HomePageTestWithInput@4efbca5a]" started-at="2025-06-22T00:14:39 IST" name="setup" finished-at="2025-06-22T00:14:44 IST" duration-ms="5219" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="searchWithInputAndCalculateDateDiff()[pri:0, instance:com.patinformed.testscript.HomePageTestWithInput@4efbca5a]" started-at="2025-06-21T05:57:44 IST" name="searchWithInputAndCalculateDateDiff" finished-at="2025-06-21T05:57:57 IST" duration-ms="12834" status="PASS">
+        <test-method signature="searchWithInputAndCalculateDateDiff()[pri:0, instance:com.patinformed.testscript.HomePageTestWithInput@4efbca5a]" started-at="2025-06-22T00:14:44 IST" name="searchWithInputAndCalculateDateDiff" finished-at="2025-06-22T00:14:57 IST" duration-ms="12923" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[[ Test script execution starts from here. ]]]>
@@ -33,17 +33,17 @@
             </line>
           </reporter-output>
         </test-method> <!-- searchWithInputAndCalculateDateDiff -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.patinformed.testscript.HomePageTestWithInput@4efbca5a]" started-at="2025-06-21T05:57:57 IST" name="teardown" finished-at="2025-06-21T05:57:58 IST" duration-ms="608" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.patinformed.testscript.HomePageTestWithInput@4efbca5a]" started-at="2025-06-22T00:14:57 IST" name="teardown" finished-at="2025-06-22T00:14:57 IST" duration-ms="436" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.patinformed.testscript.HomePageTestWithInput -->
       <class name="com.patinformed.testscript.HomePageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.patinformed.testscript.HomePageTest@1623b78d]" started-at="2025-06-21T05:57:28 IST" name="setup" finished-at="2025-06-21T05:57:35 IST" duration-ms="7291" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.patinformed.testscript.HomePageTest@1623b78d]" started-at="2025-06-22T00:14:24 IST" name="setup" finished-at="2025-06-22T00:14:34 IST" duration-ms="9679" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="searchWithoutInputAndCalculateDateDiff()[pri:0, instance:com.patinformed.testscript.HomePageTest@1623b78d]" started-at="2025-06-21T05:57:35 IST" name="searchWithoutInputAndCalculateDateDiff" finished-at="2025-06-21T05:57:39 IST" duration-ms="3654" status="PASS">
+        <test-method signature="searchWithoutInputAndCalculateDateDiff()[pri:0, instance:com.patinformed.testscript.HomePageTest@1623b78d]" started-at="2025-06-22T00:14:34 IST" name="searchWithoutInputAndCalculateDateDiff" finished-at="2025-06-22T00:14:38 IST" duration-ms="4537" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[[ Test script execution starts from here. ]]]>
@@ -53,7 +53,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- searchWithoutInputAndCalculateDateDiff -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.patinformed.testscript.HomePageTest@1623b78d]" started-at="2025-06-21T05:57:39 IST" name="teardown" finished-at="2025-06-21T05:57:40 IST" duration-ms="511" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.patinformed.testscript.HomePageTest@1623b78d]" started-at="2025-06-22T00:14:38 IST" name="teardown" finished-at="2025-06-22T00:14:39 IST" duration-ms="430" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
