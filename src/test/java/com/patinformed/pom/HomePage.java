@@ -56,6 +56,7 @@ public class HomePage {
 	}
 
 	public void enterSearchText(String text) {
+		searchBox.clear();
 		searchBox.sendKeys(text);
 	}
 }

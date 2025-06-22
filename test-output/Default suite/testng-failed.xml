@@ -5,7 +5,7 @@
     <classes>
       <class name="com.patinformed.testscript.HomePageTestWithInput">
         <methods>
-          <include name="searchWithInputAndCalculateDateDiff"/>
+          <include name="searchWithInputAndCalculateDateDiff" invocation-numbers="0 1"/>
           <include name="teardown"/>
           <include name="setup"/>
         </methods>
