@@ -41,29 +41,45 @@ import com.utility.DateUtil;
 	        boolean foundValidCard = false;
 	       
 	        for (WebElement card : cards) {
-	        	 String filing = "", publication = "";
-	            try {
+	        	 String filing = "", publication = "", grant = "";
+	        	 try {
 	                 filing = card.findElement(By.xpath(".//b[contains(text(),'Filing date')]/parent::td/following-sibling::td")).getText().split("\\(")[0].trim();
-	            } catch (Exception e) {
-		                continue;
-		            }
-	            try {
-	                 publication = card.findElement(By.xpath(".//b[contains(text(),'Publication date')]/parent::td/following-sibling::td")).getText().split("\\(")[0].trim();
-	            } catch (Exception e) {
-		                continue;
-		            }
+	             } catch (Exception e) {
+	             }
 
-	                if (!filing.isEmpty() && !publication.isEmpty()) {
-	                    long diff = DateUtil.calculateDateDifference(filing, publication);
-	                    System.out.println(" Filing Date: " + filing);
-	                    System.out.println(" Publication Date: " + publication);
-	                    System.out.println("Date Difference (in days): " + diff);
-	                    foundValidCard = true;
-	                    break;
+	             try {
+	                 publication = card.findElement(By.xpath(".//b[contains(text(),'Publication date')]/parent::td/following-sibling::td")).getText().split("\\(")[0].trim();
+	             } catch (Exception e) {
+	             }
+
+	             try {
+	                 grant = card.findElement(By.xpath(".//b[contains(text(),'Grant date')]/parent::td/following-sibling::td")).getText().split("\\(")[0].trim();
+	             } catch (Exception e) {
+	             }
+
+
+	            //System.out.println("Filing: " + filing + " | Publication: " + publication + " | Grant: " + grant);
+
+	            if (!filing.isEmpty() && !publication.isEmpty()) {
+	                long diff = DateUtil.calculateDateDifference(filing, publication);
+	                System.out.println("Filing and Publication = " + diff + " days");
+	                foundValidCard = true;
+	                break;
+	            } else if (!filing.isEmpty() && !grant.isEmpty()) {
+	                long diff = DateUtil.calculateDateDifference(filing, grant);
+	                System.out.println("Filing and Grant = " + diff + " days");
+	                foundValidCard = true;
+	                break;
+	            } else if (!publication.isEmpty() && !grant.isEmpty()) {
+	                long diff = DateUtil.calculateDateDifference(publication, grant);
+	                System.out.println("Publication and Grant = " + diff + " days");
+	                foundValidCard = true;
+	                break;
 	            }
 	        }
+
 	        if (!foundValidCard) {
-	            System.out.println(" No card with both Filing and Publication dates found.");
+	            System.out.println("No card with at least two valid dates found to calculate difference.");
 	        }
 	    }
 	}
